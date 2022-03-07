@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+/* navbar */
+   nav,footer{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    animation-name: sonu1 ;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes sonu1{
+    0%{
+      background-image: linear-gradient(to right, rgb(206, 206, 168), rgb(173, 199, 173) ,rgb(177, 206, 233));
+    }
+    25%{
+      background-image: linear-gradient(to right, rgb(168, 200, 206), rgb(196, 197, 158) ,rgb(177, 233, 199));
+    }
+    75%{
+      background-image: linear-gradient(to right, rgb(183, 216, 173), rgb(169, 201, 199) ,rgb(223, 240, 196));
+    }
+    100%{
+      background-image: linear-gradient(to right, rgb(223, 205, 156), rgb(207, 197, 150) ,rgb(219, 219, 188));
+    }
+}
+span.logo{
+    height: 2rem; 
+    margin:0  1rem ;
+    width: 3.4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.233), 0 6px 20px 0 rgba(0, 0, 0,0.19);
+  }
+span.logo img{
+      height: 100%;
+      width: 100%; 
+  }
+  nav ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  nav ul li{
+    margin-left: 2rem;
+    list-style-type: none;
+    font-weight: bold;
+  } 
+  nav ul li:hover{
+    color: gray;
+  }  
+
+   .slide-container {
+    position: relative;
+  }
+  
+  .slide-container .slide {
+    display: none;
+    height: 34rem;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .slide-container .slide img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .slide-container .arrow {
+    font-size: 1.7rem;
+    position: absolute;
+    font-weight: bold;
+    cursor: pointer;
+    top: 45%;
+    color: white;
+    transition: all 1s  ease-in-out;
+  }
+  
+  .slide-container .next {
+    right: .6rem;
+  }
+  
+  .slide-container .prev {
+    left: .6rem;
+  }
+  
+  .slide-container .arrow:hover{
+    padding: .41rem .52rem;
+    background-color: white;
+    color: black;
+  }
+
+  /* popular */
+  .container{
+    height: 100%;
+    background-color: black;
+    padding: 0 2.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 3rem;
+  }
+  .container h1{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255,.7);
+    font-size: 1.3rem;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .drama, .action,.sci-fi{
+    justify-content: center;
+    display: flex;
+    gap: .7rem;
+    align-content: space-between;
+    position: relative;
+
+  }
+  .box{
+    margin-top: .6rem;
+    width: 12rem;
+    height: 12rem;
+    position: relative;
+  }
+  .box img{
+    width: 100%;
+    height: 100%;
+  }
+  .box span{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.6);
+    width: 100%;
+    height: 3.6rem;
+    text-align: center;
+    color: white;
+  }
+  .box span h2{
+    font-size: 1rem;
+  }
+ 
+  @media (max-width:850px){
+    .drama, .action,.sci-fi{
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+    }
+    
+  }
+  @media (max-width:600px){  
+    .drama, .action,.sci-fi{
+      margin: auto;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(2,1fr);
+    }
+    
+  }
+  @media (max-width:488px){
+    .slide-container .slide {
+      height: 20rem;
+    }
+    .box span h2{
+      font-size: .9rem;
+    }
+    .box span p{
+      font-size: .9rem;
+    }
+
+    .box{
+      width: 9.7rem;
+      height: 9.7rem;
+    }
+    .drama, .action,.sci-fi{
+      grid-template-columns: repeat(2,1fr);
+    }
+    
+  }
+  @media (max-width:408px){
+    nav ul li{
+      margin-left: 1rem;
+      list-style-type: none;
+      font-weight: bold;
+    } 
+    .box{
+      width: 8rem;
+      height: 8rem;
+    }
+    .drama, .action,.sci-fi{
+      grid-template-columns: repeat(2,1fr);
+    }
+    
+  }
+ 
+  footer{
+    justify-content: center;
+  }
